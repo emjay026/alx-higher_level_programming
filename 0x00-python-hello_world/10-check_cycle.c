@@ -14,6 +14,10 @@ int check_cycle(listint_t *list)
     listint_t *prev = NULL;
     int result;
 
+    /**
+     * check NULL and cycle cases for 0 to 3 nodes.
+    */
+
     if (head == NULL)
         return (0);
 
@@ -28,6 +32,10 @@ int check_cycle(listint_t *list)
 
     if (head->next->next == head || head->next->next == head->next)
         return (1);
+
+    /**
+     * when more than 3 nodes exist.
+    */
 
     prev = head->next;
     curr = head->next->next;
