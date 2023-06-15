@@ -4,7 +4,7 @@ def roman_to_int(roman_string):
     if roman_string is None or type(roman_string) is not str:
         return 0
 
-    rom_int = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 100}
+    rom_int = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     keys = list(rom_int.keys())
     sum = 0
 
