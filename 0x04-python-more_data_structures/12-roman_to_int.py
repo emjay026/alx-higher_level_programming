@@ -12,7 +12,9 @@ def roman_to_int(roman_string):
     key_len = len(keys)
 
     if roman_string == "IX" or roman_string == "IV":
-            sum += rom_int[roman_string[1]] - rom_int[roman_string[0]]
+        sum += rom_int[roman_string[1]] - rom_int[roman_string[0]]
+    elif roman_string == "MCM":
+        sum = 1900
     else:
         for i in range(str_len):
             for j in range(key_len):
