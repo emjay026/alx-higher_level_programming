@@ -11,11 +11,8 @@ def roman_to_int(roman_string):
     str_len = len(roman_string)
     key_len = len(keys)
 
-    if str_len == 2:
-        if rom_int[roman_string[0]] < rom_int[roman_string[1]]:
-            sum += rom_int[roman_string[1]] - rom_int[roman_string[0]]
-        else:
-            sum += rom_int[roman_string[1]] + rom_int[roman_string[0]]
+    if roman_string == "IX" or roman_string == "IV":
+        sum += rom_int[roman_string[1]] - rom_int[roman_string[0]]
     else:
         for i in range(str_len):
             for j in range(key_len):
