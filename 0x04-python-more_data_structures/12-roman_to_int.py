@@ -9,9 +9,9 @@ def roman_to_int(roman_string):
     rom_int = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 100}
 
     for i in range(len(roman_string)):
-        if i > 0 and rom_int[roman_string[i].upper()] > rom_int[roman_string[i - 1].upper()]:
-            sum += rom_int[roman_string[i].upper()] - 2
+        if i > 0 and rom_int[roman_string[i]] > rom_int[roman_string[i - 1]]:
+            sum += rom_int[roman_string[i]] - (rom_int[roman_string[i - 1]] * 2)
         else:
-            sum += rom_int[roman_string[i].upper()]
+            sum += rom_int[roman_string[i]]
 
     return sum
