@@ -10,7 +10,7 @@ def roman_to_int(roman_string):
 
     for i in range(len(roman_string)):
         if i > 0 and rom_int[roman_string[i]] > rom_int[roman_string[i - 1]]:
-            sum += rom_int[roman_string[i]] - (rom_int[roman_string[i - 1]] * 2)
+            sum += rom_int[roman_string[i]] - (rom_int[roman_string[i - 1]]*2)
         else:
             sum += rom_int[roman_string[i]]
 
