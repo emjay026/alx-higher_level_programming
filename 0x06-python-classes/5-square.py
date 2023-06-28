@@ -12,12 +12,7 @@ class Square:
 
         Args:
             size (int): the size of the square."""
-        if type(size) != int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-
-        self.__size = size
+        self.size = size
         """int: stores the size of the attribute"""
 
     def area(self):
@@ -29,7 +24,7 @@ class Square:
 
     @property
     def size(self):
-        """Gets zize of square.
+        """Gets size of square.
 
         Returns:
             the current square area."""
