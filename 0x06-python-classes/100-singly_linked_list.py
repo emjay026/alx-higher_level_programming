@@ -98,11 +98,11 @@ class SinglyLinkedList:
     def __str__(self):
         """Prints a singly linked list"""
         str = ""
-        if self.__head.next_node is None:
+        if self.__head is not None and self.__head.next_node is None:
             str += "{:d}".format(self.__head.data)
             if self.__head.next_node is not None:
                 str += "\n"
-        elif self.__head.next_node is not None:
+        elif self.__head is not None and self.__head.next_node is not None:
             head = self.__head
 
             while self.__head is not None:
