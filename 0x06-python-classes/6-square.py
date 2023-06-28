@@ -23,6 +23,20 @@ class Square:
             the current square area."""
         return self.__size ** 2
 
+    def my_print(self):
+        """Prints a square using the # character"""
+        if self.__size == 0:
+            print("")
+        else:
+            for g in range(self.__position[1]):
+                print("")
+            for i in range(self.__size):
+                for h in range(self.__position[0]):
+                    print(" ", end="")
+                for j in range(self.__size):
+                    print("#", end="")
+                print("")
+
     @property
     def size(self):
         """Gets size of square.
@@ -49,9 +63,9 @@ class Square:
 
         Returns:
             position in the square."""
-        return self.__position
+        return (self.__position)
 
-    @size.setter
+    @position.setter
     def position(self, value):
         """Sets position value
 
@@ -66,17 +80,3 @@ class Square:
         if x < 0 or y < 0:
             raise TypeError(error)
         self.__position = value
-
-    def my_print(self):
-        """Prints a square using the # character"""
-        if self.__size == 0:
-            print("")
-        else:
-            for g in range(self.__position[1]):
-                print("")
-            for i in range(self.__size):
-                for h in range(self.__position[0]):
-                    print(" ", end="")
-                for j in range(self.__size):
-                    print("#", end="")
-                print("")
