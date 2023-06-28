@@ -99,14 +99,16 @@ class SinglyLinkedList:
         """Prints a singly linked list"""
         str = ""
         if self.__head.next_node is None:
-            str += "{:d}\n".format(self.__head.data)
+            str += "{:d}".format(self.__head.data)
+            if self.__head.next_node is not None:
+                str += "\n"
         elif self.__head.next_node is not None:
-
             head = self.__head
 
             while self.__head is not None:
                 str += "{:d}".format(self.__head.data)
-                str += "\n" if self.__head.next_node else ""
+                if self.__head.next_node is not None:
+                    str += "\n"
                 self.__head = self.__head.next_node
 
             self.__head = head
