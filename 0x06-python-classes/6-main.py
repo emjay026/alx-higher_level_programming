@@ -19,4 +19,4 @@ Square = __import__('6-square').Square
 mysquare = Square(3, (1, 1))
 print(mysquare.size)
 print(mysquare.area())
-print(mysquare.position)
+print(type(mysquare.position))

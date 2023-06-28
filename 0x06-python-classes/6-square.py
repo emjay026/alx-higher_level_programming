@@ -72,7 +72,7 @@ class Square:
         Args:
             value (tuple): 2d position in a square."""
         error = "position must be a tuple of 2 positive integers"
-        if type(value) == tuple and len(value) != 2:
+        if type(value) != tuple and len(value) != 2:
             raise TypeError(error)
         x, y = value
         if type(x) != int or type(y) != int:
