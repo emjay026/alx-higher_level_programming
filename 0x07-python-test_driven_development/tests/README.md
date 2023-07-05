@@ -1,0 +1,1 @@
+This directory contains test file of type text (*.txt)
