@@ -152,7 +152,7 @@ Traceback (most recent call last):
     ...
 TypeError: width must be an integer
 
->>> bg.integer_validator("width", 89, 5) #doctest: +ELLIPSIS
+>>> bg.integer_validator(1.65, 0.12) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
-TypeError: integer_validator() takes 3 positional arguments but 4 were given
+TypeError: 1.65 must be an integer
