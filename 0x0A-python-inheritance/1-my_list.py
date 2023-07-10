@@ -7,6 +7,8 @@ class MyList(list):
     """ List wrapper class."""
 
     def __init(self):
+        """ Funtion that initializes
+            an instance of MyList"""
         super().list
 
     def print_sorted(self):
