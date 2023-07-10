@@ -21,11 +21,11 @@
 >>> my_list.print_sorted()
 [None]
 
->>> my_list = MyList("school")
+>>> my_list = MyList([])
 >>> print(my_list)
-['s', 'c', 'h', 'o', 'o', 'l']
+[]
 >>> my_list.print_sorted()
-['c', 'h', 'l', 'o', 'o', 's']
+[]
 
 #if there are two None elements
 
