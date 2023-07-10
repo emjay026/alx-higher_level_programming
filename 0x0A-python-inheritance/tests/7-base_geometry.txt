@@ -24,14 +24,14 @@ TypeError: name must be an integer
 >>> bg.integer_validator("age", 0) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
-ValueError: ... must be greater than 0
+ValueError: age must be greater than 0
 
 #if 2nd arg is negative
 
 >>> bg.integer_validator("distance", -4) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
-ValueError: ... must be greater than 0
+ValueError: distance must be greater than 0
 
 #if 0 args given
 
@@ -107,3 +107,12 @@ TypeError: integer_validator() takes 3 positional arguments but 4 were given
 Traceback (most recent call last):
     ...
 TypeError: width must be an integer
+
+#if area and integer_validator were tested together
+
+>>> bg.area() #doctest: +ELLIPSIS
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
+
+>>> bg.integer_validator("width", 1)

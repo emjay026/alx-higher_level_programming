@@ -27,4 +27,6 @@ bg = BaseGeometry()
 # bg.integer_validator("age", 0)
 # bg.integer_validator("distance", -4)
 
-bg.integer_validator("width", False)
+
+bg.area()
+bg.integer_validator("width", 1)
