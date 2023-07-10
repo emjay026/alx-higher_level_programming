@@ -74,3 +74,10 @@ ValueError: None must be greater than 0
 Traceback (most recent call last):
     ...
 TypeError: age must be an integer
+
+#if all args are float:
+
+>>> bg.integer_validator(1.65, 0.12) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: 1.65 must be an integer
