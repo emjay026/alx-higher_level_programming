@@ -21,12 +21,8 @@ bg = BaseGeometry()
 # except Exception as e:
 #     print("[{}] {}".format(e.__class__.__name__, e))
 
-# bg.integer_validator("my_int", 12)
-# bg.integer_validator("width", 89)
-# bg.integer_validator("name", "John")
-# bg.integer_validator("age", 0)
-# bg.integer_validator("distance", -4)
-
-
-bg.area()
-bg.integer_validator("width", 1)
+bg.integer_validator("my_int", 12)
+bg.integer_validator("width", 89)
+bg.integer_validator("name", "John")
+bg.integer_validator("age", 0)
+bg.integer_validator("distance", -4)

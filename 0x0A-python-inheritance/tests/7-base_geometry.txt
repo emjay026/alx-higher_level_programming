@@ -1,8 +1,7 @@
 #test cases for base_geometry
 
-#>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
-#>>> bg = BaseGeometry()
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
 
 #if inputs are correct
 
@@ -116,3 +115,22 @@ Traceback (most recent call last):
 Exception: area() is not implemented
 
 #>>> bg.integer_validator("width", 1)
+
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("width", 89)
+
+>>> bg.integer_validator("name", "John") #doctest: +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+
+>>> bg.integer_validator("age", 0) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+    ...
+ValueError: age must be greater than 0
+
+>>> bg.integer_validator("distance", -4) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+    ...
+ValueError: distance must be greater than 0
