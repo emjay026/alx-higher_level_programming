@@ -14,6 +14,14 @@
 >>> my_list.print_sorted()
 []
 
+#if the elements are of type float
+
+>>> my_list = MyList([1.43, 46.16, 0.4, -1.6])
+>>> print(my_list)
+[1.43, 46.16, 0.4, -1.6]
+>>> my_list.print_sorted()
+[-1.6, 0.4, 1.43, 46.16]
+
 #if there's one None element
 
 >>> my_list = MyList()
