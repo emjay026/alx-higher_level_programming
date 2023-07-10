@@ -1,5 +1,34 @@
 >>> MyList = __import__('1-my_list').MyList
 
+#if there are 0 elements
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+#if there's one None element
+
+>>> my_list = MyList()
+>>> my_list.append(None)
+>>> my_list.print_sorted()
+
+#if there are two None elements
+
+>>> my_list = MyList()
+>>> my_list.append(None)
+>>> my_list.append(None)
+>>> my_list.print_sorted() #doctest: +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: '<' not supported between instances of ...
+
+#if there's 1 element
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1]
+
 #if elements are of type int
 
 >>> my_list = MyList()
@@ -11,7 +40,7 @@
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
-#if elements of of mixed type
+#if elements of mixed type
 
 >>> my_list.clear()
 >>> my_list.append(5)
@@ -19,10 +48,10 @@
 >>> my_list.append("vj")
 >>> my_list.append("sr")
 >>> my_list.append("5")
->>> my_list.print_sorted()
+>>> my_list.print_sorted() #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
-TypeError: '<' not supported between instances of 'int' and 'str'
+TypeError: '<' not supported between instances of ...
 
 #if elements of type str
 
