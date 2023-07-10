@@ -8,7 +8,7 @@ def is_same_class(obj, a_class):
     Params:
         obj (any object): an object instance.
         a_class (any class): a class"""
-    if a_class is object:
+    if obj != object and a_class == object:
         return False
     else:
         return isinstance(obj, a_class)
