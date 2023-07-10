@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" This module contains MyList class
-    which inherits from List []"""
+""" This module contains MyList class"""
 
 
 class MyList(list):

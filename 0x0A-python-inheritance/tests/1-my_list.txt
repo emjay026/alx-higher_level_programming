@@ -1,3 +1,5 @@
+#test cases for my_list
+
 >>> MyList = __import__('1-my_list').MyList
 
 #if there are 0 elements
@@ -11,6 +13,7 @@
 >>> my_list = MyList()
 >>> my_list.append(None)
 >>> my_list.print_sorted()
+[None]
 
 #if there are two None elements
 
@@ -39,6 +42,17 @@ TypeError: '<' not supported between instances of ...
 >>> my_list.append(5)
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
+
+#if elements are of type int
+
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(-4)
+>>> my_list.append(-2)
+>>> my_list.append(-3)
+>>> my_list.append(-5)
+>>> my_list.print_sorted()
+[-5, -4, -3, -2, -1]
 
 #if elements of mixed type
 
