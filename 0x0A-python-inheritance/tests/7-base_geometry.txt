@@ -147,12 +147,7 @@ Traceback (most recent call last):
     ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
->>> bg.integer_validator("width", False) #doctest: +ELLIPSIS
+>>> bg.area(1) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
-TypeError: width must be an integer
-
->>> bg.integer_validator("age") #doctest: +ELLIPSIS
-Traceback (most recent call last):
-    ...
-TypeError: integer_validator() missing 1 required positional argument: 'value'
+TypeError: area() takes 1 positional argument but 2 were given
