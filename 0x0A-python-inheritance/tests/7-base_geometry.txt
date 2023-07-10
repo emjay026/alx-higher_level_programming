@@ -1,118 +1,118 @@
 #test cases for base_geometry
 
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+#>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
->>> bg = BaseGeometry()
+#>>> bg = BaseGeometry()
 
 #if inputs are correct
 
->>> bg.integer_validator("my_int", 12)
+#>>> bg.integer_validator("my_int", 12)
 
 #if inputs are correct 2
 
->>> bg.integer_validator("width", 89)
+#>>> bg.integer_validator("width", 89)
 
 #if 2nd arg is not an int
 
->>> bg.integer_validator("name", "John") #doctest: +ELLIPSIS
+#>>> bg.integer_validator("name", "John") #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
 
 #if 2nd arg is == 0
 
->>> bg.integer_validator("age", 0) #doctest: +ELLIPSIS
+#>>> bg.integer_validator("age", 0) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 ValueError: age must be greater than 0
 
 #if 2nd arg is negative
 
->>> bg.integer_validator("distance", -4) #doctest: +ELLIPSIS
+#>>> bg.integer_validator("distance", -4) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 ValueError: distance must be greater than 0
 
 #if 0 args given
 
->>> bg.integer_validator() #doctest: +ELLIPSIS
+#>>> bg.integer_validator() #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 #if 1 correct type arg given
 
->>> bg.integer_validator("age") #doctest: +ELLIPSIS
+#>>> bg.integer_validator("age") #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 #if 1 incorrect type arg given
 
->>> bg.integer_validator(1) #doctest: +ELLIPSIS
+#>>> bg.integer_validator(1) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 #if 2 incorrect type arg given
 
->>> bg.integer_validator(None, None) #doctest: +ELLIPSIS
+#>>> bg.integer_validator(None, None) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 TypeError: None must be an integer
 
 #if 1 incorrect type and < 0 args given respectively
 
->>> bg.integer_validator(None, -1) #doctest: +ELLIPSIS
+#>>> bg.integer_validator(None, -1) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 ValueError: None must be greater than 0
 
 #if 2nd arg is a float:
 
->>> bg.integer_validator("age", 0.12) #doctest: +ELLIPSIS
+#>>> bg.integer_validator("age", 0.12) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 TypeError: age must be an integer
 
 #if all args are float:
 
->>> bg.integer_validator(1.65, 0.12) #doctest: +ELLIPSIS
+#>>> bg.integer_validator(1.65, 0.12) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 TypeError: 1.65 must be an integer
 
 #if area method is tested
 
->>> bg.area() #doctest: +ELLIPSIS
+#>>> bg.area() #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
 
->>> bg.area(1) #doctest: +ELLIPSIS
+#>>> bg.area(1) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 TypeError: area() takes 1 positional argument but 2 were given
 
 #if 3 args given instead of 2
 
->>> bg.integer_validator("width", 89, 5) #doctest: +ELLIPSIS
+#>>> bg.integer_validator("width", 89, 5) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 #if 2nd arg is bool
 
->>> bg.integer_validator("width", False) #doctest: +ELLIPSIS
+#>>> bg.integer_validator("width", False) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 TypeError: width must be an integer
 
 #if area and integer_validator were tested together
 
->>> bg.area() #doctest: +ELLIPSIS
+#>>> bg.area() #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
 
->>> bg.integer_validator("width", 1)
+#>>> bg.integer_validator("width", 1)
