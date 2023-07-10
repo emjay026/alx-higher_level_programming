@@ -5,6 +5,12 @@
 #if there are 0 elements
 
 >>> my_list = MyList()
+>>> print(my_list)
+[]
+
+#if there are 0 elements with sort
+
+>>> my_list = MyList()
 >>> my_list.print_sorted()
 []
 
@@ -14,6 +20,12 @@
 >>> my_list.append(None)
 >>> my_list.print_sorted()
 [None]
+
+>>> my_list = MyList("school")
+>>> print(my_list)
+['s', 'c', 'h', 'o', 'o', 'l']
+>>> my_list.print_sorted()
+['c', 'h', 'l', 'o', 'o', 's']
 
 #if there are two None elements
 
