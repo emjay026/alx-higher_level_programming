@@ -32,6 +32,31 @@ TypeError: '<' not supported between instances of ...
 >>> my_list.print_sorted()
 [1]
 
+#if elements are of type int and unsorted
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+#if elements are of type int and unsorted vs sorted
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
 #if elements are of type int
 
 >>> my_list = MyList()
@@ -43,7 +68,7 @@ TypeError: '<' not supported between instances of ...
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
-#if elements are of type int
+#if elements are of type int and negative
 
 >>> my_list = MyList()
 >>> my_list.append(-1)
@@ -53,6 +78,17 @@ TypeError: '<' not supported between instances of ...
 >>> my_list.append(-5)
 >>> my_list.print_sorted()
 [-5, -4, -3, -2, -1]
+
+#if elements are of type int with mix of negative and positive
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(-4)
+>>> my_list.append(2)
+>>> my_list.append(-3)
+>>> my_list.append(-5)
+>>> my_list.print_sorted()
+[-5, -4, -3, 1, 2]
 
 #if elements of mixed type
 
