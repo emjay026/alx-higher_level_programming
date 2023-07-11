@@ -155,3 +155,8 @@ Traceback (most recent call last):
     ...
 TypeError: None must be an integer
 
+>>> bg.integer_validator("name", None) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+
