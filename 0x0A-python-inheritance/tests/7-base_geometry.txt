@@ -166,3 +166,13 @@ TypeError: name must be an integer
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
+
+>>> bg.integer_validator("name", (8,)) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+
+>>> bg.integer_validator("name", {8, 2, 5}) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
