@@ -25,10 +25,6 @@ class Rectangle(BaseGeometry):
             of geometrical shapes."""
         return self.__width * self.__height
 
-    def print(self):
-        """ Prints the Rectangle."""
-        print(f"[Rectangle] {self.__width}/{self.__height}")
-
     def __str__(self):
         """ Returns the Rectangle"""
         return (f"[Rectangle] {self.__width}/{self.__height}")
