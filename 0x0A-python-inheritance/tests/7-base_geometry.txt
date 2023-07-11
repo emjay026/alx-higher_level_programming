@@ -157,7 +157,7 @@ Traceback (most recent call last):
     ...
 TypeError: None must be an integer
 
->>> bg.area(None) #doctest: +ELLIPSIS
+>>> bg.integer_validator("distance", True) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
-TypeError: area() takes 1 positional argument but 2 were given
+TypeError: distance must be an integer
