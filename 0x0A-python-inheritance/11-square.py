@@ -21,10 +21,6 @@ class Square(Rectangle):
             of geometrical shapes."""
         return self.__size * self.__size
 
-    def print(self):
-        """ Prints the Square."""
-        print(f"[Square] {self.__size}/{self.__size}")
-
     def __str__(self):
         """ Returns the Square."""
         return (f"[Square] {self.__size}/{self.__size}")
