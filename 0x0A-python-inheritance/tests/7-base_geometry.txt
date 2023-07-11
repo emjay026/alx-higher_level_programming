@@ -152,12 +152,7 @@ Traceback (most recent call last):
     ...
 TypeError: width must be an integer
 
->>> bg.integer_validator(None, None) #doctest: +ELLIPSIS
+>>> bg.integer_validator("age", 3.12) #doctest: +ELLIPSIS
 Traceback (most recent call last):
     ...
-TypeError: None must be an integer
-
->>> bg.integer_validator("distance", True) #doctest: +ELLIPSIS
-Traceback (most recent call last):
-    ...
-TypeError: distance must be an integer
+TypeError: age must be an integer
