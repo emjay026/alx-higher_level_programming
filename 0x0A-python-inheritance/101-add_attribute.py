@@ -8,7 +8,7 @@ def is_builtin(obj):
 
         Returns:
             true if object is built-in else false"""
-    lst = ['__weakref__', '__dict__', '__module__']
+    lst = ['__dict__', '__module__']
     if all(elem in dir(obj) for elem in lst):
         return False
     else:
