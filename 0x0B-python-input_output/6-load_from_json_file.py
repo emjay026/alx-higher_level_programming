@@ -5,7 +5,7 @@ import json
 
 
 def load_from_json_file(filename):
-    """ Writes JSON to a file
+    """ Reads JSON file
 
     Params:
         filename (str): name of file."""
