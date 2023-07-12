@@ -41,4 +41,3 @@ if len(sys.argv) > 1:
     add(list_obj, sys.argv[1:])
 
 save_to_json_file(list_obj, filename)
-
