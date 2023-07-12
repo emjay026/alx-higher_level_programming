@@ -8,8 +8,8 @@ def save_to_json_file(my_obj, filename):
     """ Writes JSON to a file
 
         Params:
-            filename (str): name of file
-            text (str): contents to write to file """
+            my_obj (str): contents to write to file
+            filename (str): name of file"""
     num_chars = 0
     with open(filename, 'w') as fd:
         num_chars = fd.write(json.dumps(my_obj))

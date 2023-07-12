@@ -11,9 +11,9 @@ def from_json_string(my_str):
         object.
 
         Params:
-            my_obj (any): object
+            my_str (JSON): object
 
         Returns:
-            json object."""
+            json string."""
     result = json.loads(my_str)
     return result
