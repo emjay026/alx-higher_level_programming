@@ -12,9 +12,12 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 filename = "add_item.json"
 
 
-def load_obj(filename):
+def load(filename):
     """ loads json from file
-        or creates json file if DNE."""
+        or creates json file if DNE.
+
+        Params:
+            filename (str): file name."""
     result = ""
     try:
         result = load_from_json_file(filename)
@@ -23,9 +26,19 @@ def load_obj(filename):
     return result
 
 
-list_obj = load_obj(filename)
+def add(list_obj, list_):
+    """ appends items to list.
+
+        Params:
+            list (list): """
+    for item in list_:
+        list_obj.append(item)
+
+
+list_obj = load(filename)
 
 if len(sys.argv) > 1:
-    for arg in sys.argv[1:]:
-        list_obj.append(arg)
-    save_to_json_file(list_obj, filename)
+    add(list_obj, sys.argv[1:])
+
+save_to_json_file(list_obj, filename)
+
