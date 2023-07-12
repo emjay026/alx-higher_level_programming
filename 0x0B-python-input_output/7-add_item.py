@@ -28,5 +28,4 @@ list_obj = load_obj(filename)
 if len(sys.argv) > 1:
     for arg in sys.argv[1:]:
         list_obj.append(arg)
-
-save_to_json_file(list_obj, filename)
+    save_to_json_file(list_obj, filename)
