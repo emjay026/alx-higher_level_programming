@@ -84,19 +84,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """ Prints a rectangle"""
-        # str = ""
-        # if self.__width == 0 or self.__height == 0:
-        #     return str
-        # else:
-        #     for i in range(self.__height):
-        #         for j in range(self.__width):
-        #             str += "#"
-        #         if i < self.__height - 1:
-        #             str += "\n"
-        # print(str)
-
-        """Prints a square using the # character"""
+        """ Prints a rectangle using the # character"""
         if self.__width == 0 or self.__height == 0:
             print("")
         else:
@@ -112,4 +100,4 @@ class Rectangle(Base):
     def __str__(self):
         """ Prints a rectangle"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
-                f"- {self.__width}/{self.__height}")
+                f" - {self.__width}/{self.__height}")
