@@ -101,3 +101,13 @@ class Rectangle(Base):
         """ Prints a rectangle"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
                 f" - {self.__width}/{self.__height}")
+
+    def update(self, *args):
+        """ Updates this Rectangle's attributes
+
+            args (tuple): accepts multiple values."""
+        self.id = args[0]
+        self.width = args[1]
+        self.height = args[2]
+        self.x = args[3]
+        self.y = args[4]
