@@ -107,7 +107,7 @@ class Rectangle(Base):
 
             args (tuple): accepts multiple values.
             kwargs (dictionary): acceps multiple keyworded values."""
-        if args != None and len(args) > 0:
+        if args is not None and len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:
