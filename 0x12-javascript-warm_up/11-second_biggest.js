@@ -21,9 +21,9 @@ if (argv.length <= 3) {
     }
   }
 
-  for (i = 3; i < argv.length; i++) {
-    if (+argv[i] > highest2 && +argv[i] !== highest) {
-      highest2 = +argv[i];
+  for (let j = 3; j < argv.length; j++) {
+    if (+argv[j] > highest2 && +argv[j] !== highest) {
+      highest2 = +argv[j];
     }
   }
 }
