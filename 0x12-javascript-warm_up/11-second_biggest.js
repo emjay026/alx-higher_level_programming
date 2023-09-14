@@ -14,11 +14,16 @@ if (argv.length <= 3) {
   }
 } else {
   highest = +argv[2];
-  highest2 = +argv[3];
+  highest2 = +argv[2];
   for (let i = 3; i < argv.length; i++) {
     if (+argv[i] > highest) {
-      highest2 = highest;
       highest = +argv[i];
+    }
+  }
+
+  for (i = 3; i < argv.length; i++) {
+    if (+argv[i] > highest2 && +argv[i] !== highest) {
+      highest2 = +argv[i];
     }
   }
 }
