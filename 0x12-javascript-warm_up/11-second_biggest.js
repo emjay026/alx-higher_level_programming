@@ -15,10 +15,10 @@ if (argv.length <= 3) {
 } else {
   highest = +argv[2];
   highest2 = +argv[3];
-  for (let i = 4; i < argv.length; i++) {
-    if (argv[i] > highest && highest > highest2) {
+  for (let i = 3; i < argv.length; i++) {
+    if (+argv[i] > highest) {
       highest2 = highest;
-      highest = argv[i];
+      highest = +argv[i];
     }
   }
 }
