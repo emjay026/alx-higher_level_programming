@@ -15,7 +15,6 @@ if __name__ == "__main__":
                          port=3306)
 
     cur = db.cursor()
-    cur.execute(f"USE {database_name}")
     cur.execute("SELECT * FROM states")
 
     rows = cur.fetchall()
