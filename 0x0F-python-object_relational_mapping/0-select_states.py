@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This module intergrates MySQL into Python."""
 
 if __name__ == "__main__":
     from sys import argv
