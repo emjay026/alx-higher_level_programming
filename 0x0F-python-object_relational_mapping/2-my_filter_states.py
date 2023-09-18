@@ -17,14 +17,16 @@ if __name__ == "__main__":
                          port=3306)
 
     cur = db.cursor()
-    cur.execute("""
+
+    qry = """
     SELECT *
     FROM states
-    WHERE name = %s
+    WHERE name = '{}'
     ORDER BY id;
-    """, (arg,))
+    """.format(arg)
+
+    cur.execute(qry)
 
     rows = cur.fetchall()
-
     for col0, col1 in rows:
         print(f"({col0}, '{col1}')")
