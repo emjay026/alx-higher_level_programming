@@ -26,3 +26,6 @@ if __name__ == "__main__":
 
     for col0, col1 in rows:
         print(f"({col0}, '{col1}')")
+
+    cur.close()
+    db.close()

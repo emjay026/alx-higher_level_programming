@@ -21,7 +21,7 @@ if __name__ == "__main__":
     qry = """
     SELECT *
     FROM states
-    WHERE name = '{}'
+    WHERE name LIKE BINARY '{}'
     ORDER BY id ASC;
     """.format(arg)
 
@@ -30,3 +30,6 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     for col0, col1 in rows:
         print(f"({col0}, '{col1}')")
+
+    cur.close()
+    db.close()
