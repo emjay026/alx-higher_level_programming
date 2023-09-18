@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ This module intergrates MySQL into Python."""
 
 if __name__ == "__main__":
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     SELECT *
     FROM states
     WHERE name = '{}'
-    ORDER BY id;
+    ORDER BY id ASC;
     """.format(arg)
 
     cur.execute(qry)
