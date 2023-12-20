@@ -9,6 +9,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """This class models State ORM mapped class."""
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
