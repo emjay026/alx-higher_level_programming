@@ -1,12 +1,12 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module that lists all State objects from a database
 """
-import sys
-from model_state import Base, State
-from sqlalchemy import (create_engine)
-from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
+    import sys
+    from model_state import Base, State
+    from sqlalchemy import (create_engine)
+    from sqlalchemy.orm import sessionmaker
 
     username = sys.argv[1]
     password = sys.argv[2]
