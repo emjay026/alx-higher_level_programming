@@ -29,4 +29,4 @@ if __name__ == "__main__":
     if (state):
         print(f'{state.id}: {state.name}')
     else:
-        print()
+        print("")
