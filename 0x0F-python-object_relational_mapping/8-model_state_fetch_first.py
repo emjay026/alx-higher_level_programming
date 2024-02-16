@@ -25,8 +25,7 @@ if __name__ == "__main__":
     # Create a new session
     session = Session()
     # Query the database
-    state = session.query(State).first()
-    if (state):
-        print(f'{state.id}: {state.name}')
-    else:
-        print("")
+    print("{}: {}".
+          format(session.query(State).first().id,
+                 session.query(State).first().name)
+          if session.query(State).first() else "")
