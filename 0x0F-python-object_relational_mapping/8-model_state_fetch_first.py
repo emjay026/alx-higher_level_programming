@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Module that lists the fist State object from a database
 """
 
@@ -25,6 +25,6 @@ if __name__ == "__main__":
     # Create a new session
     session = Session()
     # Query the database
-    all_states = session.query(State).first()
-    for state in all_states:
-        print(f'{state.id}: {state.name}')
+    state = session.query(State).first()
+
+    print(f'{state.id}: {state.name}')
