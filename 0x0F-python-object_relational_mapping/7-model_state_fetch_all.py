@@ -1,17 +1,17 @@
-#!/usr/bin/python3
-"""Lists all State objects from the database
+#!/usr/bin/env python3
+"""Module that lists all State objects from a database
 """
-import sys
-from model_state import Base, State
-from sqlalchemy import (create_engine)
-from sqlalchemy.orm import sessionmaker
-
-username = sys.argv[1]
-password = sys.argv[2]
-dn_name = sys.argv[3]
-port = 3306
-
 if __name__ == "__main__":
+    import sys
+    from model_state import Base, State
+    from sqlalchemy import (create_engine)
+    from sqlalchemy.orm import sessionmaker
+
+    username = sys.argv[1]
+    password = sys.argv[2]
+    dn_name = sys.argv[3]
+    port = 3306
+
     # Create a MySQL database engine using command-line arguments
     # for username, password, and database name respectively
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:{}/{}'.
@@ -27,6 +27,6 @@ if __name__ == "__main__":
     # Create a new session
     session = Session()
     # Query the database
-    all_users = session.query(State).order_by(State.id).all()
-    for user in all_users:
-        print(f'{user.id}: {user.name}')
+    all_states = session.query(State).order_by(State.id, ).all()
+    for state in all_states:
+        print(f'{state.id}: {state.name}')
