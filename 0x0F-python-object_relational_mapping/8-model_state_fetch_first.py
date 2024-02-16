@@ -25,7 +25,10 @@ if __name__ == "__main__":
     # Create a new session
     session = Session()
     # Query the database
-    print("{}: {}".
-          format(session.query(State).first().id,
-                 session.query(State).first().name)
-          if session.query(State).first() else "")
+    state = session.query(State).order_by(State.id).first()
+    if (state):
+        print(f'{state.id}: {state.name}')
+    else:
+        print("Nothing")
+    # Close the session
+    session.close()
