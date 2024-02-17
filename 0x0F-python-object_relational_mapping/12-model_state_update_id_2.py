@@ -29,8 +29,9 @@ if __name__ == "__main__":
     # Query the database
     state = session.query(State).filter(State.id == state_id).first()
     # Modify the returned row object
-    state.name = new_name
-    # Commit changes to database
-    session.commit()
+    if state:
+        state.name = new_name
+        # Commit changes to database
+        session.commit()
     # Close the session
     session.close()
