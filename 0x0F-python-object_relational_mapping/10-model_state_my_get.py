@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module that lists all State objects that contain the letter a
+"""Module that lists State object with the name passed as
+    argument from the database
 """
 
 if __name__ == "__main__":
@@ -12,6 +13,7 @@ if __name__ == "__main__":
     password = sys.argv[2]
     dn_name = sys.argv[3]
     port = 3306
+    search = sys.argv[4]
 
     # Create a MySQL database engine using command-line arguments
     # for username, password, and database name respectively
@@ -25,9 +27,10 @@ if __name__ == "__main__":
     # Create a new session
     session = Session()
     # Query the database
-    states = session.query(State).filter(State.name.like('%a%')).\
-        order_by(State.id).all()
-    for state in states:
-        print(f'{state.id}: {state.name}')
+    state = session.query(State).filter(State.name == search).first()
+    if state:
+        print(f'{state.id}')
+    else:
+        print("Not found")
     # Close the session
     session.close()
