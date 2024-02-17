@@ -28,6 +28,7 @@ if __name__ == "__main__":
     # Add entry to the database
     new_state = State(name=state_name)
     session.add(new_state)
+    session.commit()
     # Query the database
     state = session.query(State).filter(State.name == state_name).first()
     print(f'{state.id}')
