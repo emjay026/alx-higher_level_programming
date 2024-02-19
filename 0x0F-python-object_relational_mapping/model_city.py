@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """This module implements an ORM mapped class named 'City'.
 
 An ORM mappad class can be seen as an equivalent to a
