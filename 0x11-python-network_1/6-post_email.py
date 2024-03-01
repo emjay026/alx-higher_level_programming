@@ -10,4 +10,5 @@ if __name__ == "__main__":
 
     payload = {'email': email}
     response = requests.post(url, data=payload)
-    print(response)
+    if response.status_code == 200:
+        print(response.text)
