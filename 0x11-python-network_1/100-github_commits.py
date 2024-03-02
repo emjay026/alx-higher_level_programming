@@ -12,7 +12,7 @@ if __name__ == "__main__":
     response = requests.get(url)
 
     def sort_key(commit):
-        return commit['commit']['author']['date']
+        return commit['commit']['committer']['date']
 
     if response.status_code == 200:
         user_data = response.json()
