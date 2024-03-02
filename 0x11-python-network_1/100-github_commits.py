@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     if response.status_code == 200:
         user_data = response.json()
-        sorted_commits = sorted(user_data, key=sort_key)
+        sorted_commits = sorted(user_data, key=sort_key, reverse=True)
         count = 10
         for commit in sorted_commits:
             print(f"{commit['sha']}: {commit['commit']['author']['name']}")
