@@ -11,12 +11,11 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     dn_name = sys.argv[3]
-    port = 3306
 
     # Create a MySQL database engine using command-line arguments
     # for username, password, and database name respectively
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:{}/{}'.
-                           format(username, password, port, dn_name),
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
+                           format(username, password, dn_name),
                            pool_pre_ping=True)
     # Create all tables defined in the Base model in the connected database
     Base.metadata.create_all(engine)
@@ -26,9 +25,9 @@ if __name__ == "__main__":
     session = Session()
     # Query the database
     state = session.query(State).order_by(State.id).first()
-    if (state):
-        print(f'{state.id}: {state.name}')
-    else:
+    if (state is None):
         print("Nothing")
+    else:
+        print(f'{state.id}: {state.name}')
     # Close the session
     session.close()
