@@ -7,7 +7,7 @@ table inside some database.
 import sqlalchemy
 from model_state import Base, Column, Integer, String
 from sqlalchemy import ForeignKey
-from sqlalchemy.orm import relationship
+# from sqlalchemy.orm import relationship
 
 
 class City(Base):
@@ -20,4 +20,4 @@ class City(Base):
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
     # create a reference to state objects and
     # form a bidirectional attribute in 'State' that has access to my objects
-    state = relationship("State", back_populates="cities")
+    # state = relationship("State", back_populates="cities")
