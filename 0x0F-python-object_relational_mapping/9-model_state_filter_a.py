@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     # Create a MySQL database engine using command-line arguments
     # for username, password, and database name respectively
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:{}/{}'.
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(username, password, dn_name),
                            pool_pre_ping=True)
     # Create all tables defined in the Base model in the connected database
