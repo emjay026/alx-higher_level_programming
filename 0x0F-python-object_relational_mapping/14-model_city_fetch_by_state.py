@@ -25,9 +25,10 @@ if __name__ == "__main__":
     # Create a new session
     session = Session()
     # Query the database
-    cities = session.query(City).order_by(City.id).all()
+    cities = session.query(State, City.id, City).\
+        filter(City.state_id == State.id).order_by(City.id).all()
     # Print results
     for city in cities:
-        print(f"{city.state.name}: ({city.id}) {city.name}")
+        print(f"{city.State.name}: ({city.id}) {city.City.name}")
     # Close the session
     session.close()
