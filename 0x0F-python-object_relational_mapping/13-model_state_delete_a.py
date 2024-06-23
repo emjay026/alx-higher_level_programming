@@ -25,7 +25,7 @@ if __name__ == "__main__":
     # Create a new session
     session = Session()
     # Query the database
-    states = session.query(State).filter(State.name.like('%a%')).all()
+    states = session.query(State).filter(State.name.like('%a%'))
     for state in states:
         session.delete(state)
     # Commit changes to database
