@@ -31,7 +31,5 @@ if __name__ == "__main__":
         for city in state.cities:
             print("{}: {} -> {}".format(city.id, city.name, state.name))
 
-    # Commit changes to database
-    session.commit()
     # Close the session
     session.close()
