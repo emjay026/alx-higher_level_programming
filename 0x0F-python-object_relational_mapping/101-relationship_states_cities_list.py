@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module that adds State object “Louisiana” to the database
+"""Module that lists all State objects, and
+corresponding City objects, contained in the
+database hbtn_0e_101_usa.
 """
 
 if __name__ == "__main__":
@@ -25,13 +27,15 @@ if __name__ == "__main__":
     # Create a new session
     session = Session()
 
-    states = session.query(State).outerjoin(City).\
-        order_by(State.id, City.id).all()
+    states = session.query(State).order_by(State.id).all()
 
-    for state in states:
-        print(f"{state.id}: {state.name}")
-        for city in state.cities:
-            print(f"\t{city.id}: {city.name}")
+    if not states:
+        print("No states found.")
+    else:
+        for state in states:
+            print(f"{state.id}: {state.name}")
+            for city in state.cities:
+                print(f"\t{city.id}: {city.name}")
 
     # Close the session
     session.close()
