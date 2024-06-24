@@ -29,13 +29,9 @@ if __name__ == "__main__":
 
     states = session.query(State).order_by(State.id).all()
 
-    if not states:
-        print("No states found.")
-    else:
-        for state in states:
-            print(f"{state.id}: {state.name}")
-            for city in state.cities:
-                print(f"\t{city.id}: {city.name}")
+    res = session.query(State).outerjoin(City).order_by(State.id, City.id).all()
 
-    # Close the session
-    session.close()
+    for state in res:
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("    {}: {}".format(city.id, city.name))
